@@ -5,3 +5,4 @@ export { default as FireworksAnimation } from "./FireworksAnimation/FireworksAni
 export { default as LogoAnimation } from "./LogoAnimation/LogoAnimation";
 export { default as CandySpiral } from "./CandySpiral/CandySpiral";
 export { default as GenericButton } from "./GenericButton/GenericButton";
+export { default as ProfileIcon } from "./ProfileIcon/ProfileIcon";
