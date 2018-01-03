@@ -8,8 +8,8 @@ const Root = () => {
   return (
     <Router>
       <div>
+        <Route exact path="/" component={ Home } />
         <Route path="/main" component={ Main } />
-        <Route path="/" component={ Home } />
         <Route path="/sample" component={ Sample } />
       </div>
     </Router>
@@ -17,4 +17,3 @@ const Root = () => {
 };
 
 export default Root;
-

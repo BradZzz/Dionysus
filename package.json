@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-boilerplate",
+  "name": "theCoder.bz",
   "version": "2.1.0",
-  "description": "Minimalistic ES6 React boilerplate",
+  "description": "Main page for theCoder BradZzz",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -14,7 +14,7 @@
     "precommit": "cross-env npm run lint && npm test",
     "prepush": "cross-env npm run lint && npm test"
   },
-  "author": "Kliment Petrov <kleopetroff@gmail.com>",
+  "author": "Brad Zimmerman <mauvemoonman@gmail.com>",
   "license": "MIT",
   "jest": {
     "setupFiles": [
@@ -40,6 +40,7 @@
     "react-anime": "^2.0.1",
     "react-dom": "16.2.0",
     "react-hot-loader": "3.1.3",
+    "react-ionicons": "^2.1.6",
     "react-router-dom": "4.2.2"
   },
   "devDependencies": {

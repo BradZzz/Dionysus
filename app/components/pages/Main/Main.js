@@ -10,6 +10,7 @@ import img4 from '../../../assets/images/profile04.jpg'
 import img5 from '../../../assets/images/profile05.jpg'
 
 import ProfileNav from '../../materials/molecule/ProfileNav/ProfileNav';
+import SummaryNav from '../../materials/molecule/SummaryNav/SummaryNav';
 
 export default class Main extends Component {
   constructor(props) {
@@ -41,13 +42,12 @@ export default class Main extends Component {
           <div style={{ "width": "100vw", "height": "100vh", "position": "absolute", "background": "rgba(0,0,0,.4)" }}></div>
           <div style={{ "position": "relative", "top": "50%", "transform": "translate(40%)", "fontSize": "1.4em", "color": "#ddd" }}>
             { tag.map(this.title) }
+            <div style={{ "paddingTop": "50px" }}>
+            Generic more information button here...
+            </div>
           </div>
         </div>
-        <div style={{ "background": "blue", "height": "100vh" }}>
-          <div style={{ "position": "relative", "top": "50%", "transform": "translate(40%)", "fontSize": "1.4em", "color": "#ddd" }}>
-            Middle Section
-          </div>
-        </div>
+        <SummaryNav/>
         <ProfileNav/>
       </div>
     )

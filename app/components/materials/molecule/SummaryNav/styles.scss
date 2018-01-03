@@ -1,0 +1,20 @@
+.snavRoot {
+  background: black;
+  height: 100vh;
+  color: #ddd;
+  display: flex;
+}
+
+table.snav {
+  height: 95%;
+  width: 47%;
+  border-collapse: collapse;
+}
+
+th.snav, td.snav {
+  border: 1px solid #ddd;
+}
+
+th.snav, td.snav {
+  padding-left: 10px;
+}
