@@ -6,6 +6,10 @@ import Ionicon from 'react-ionicons'
 
 import logo from '../../../../assets/images/purdue_logo.jpg';
 
+import logo2 from '../../../../assets/images/logo_Episource.png';
+import logo3 from '../../../../assets/images/logo_GA.png';
+import logo4 from '../../../../assets/images/logo_Service.png';
+
 export default class SummaryNav extends Component {
   constructor(props) {
     super(props)
@@ -17,9 +21,20 @@ export default class SummaryNav extends Component {
         image: logo
       },
       jobs: [{
-        school: "Episource",
+        job: "Episource",
         title: "Senior Fullstack Engineer",
-        employed: "June 2017 - Present"
+        employed: "June 2017 - Present",
+        logo: logo2
+      },{
+        job: "General Assembly",
+        title: "Android / Data Science Immersive Instructor",
+        employed: "Jun 2016 - May 2017",
+        logo: logo3
+      },{
+        job: "Service",
+        title: "Senior Fullstack Engineer",
+        employed: "Oct 2015 - May 2016",
+        logo: logo4
       }],
       interests: {
         lived: ["Boston, MA", "New York, NY", "Los Angeles, CA", "Seattle, WA"],
@@ -62,11 +77,22 @@ export default class SummaryNav extends Component {
     </tr>)
   }
 
+  workRow = (entry, idx) => {
+    return (<div key={idx} style={{ "display": "flex" }}>
+      <img src={ entry.logo } style={{ "width": "100px", "height": "100px", "margin": "1em", "border": "5px solid #ddd", "borderRadius": "2px" }}/>
+      <div style={{ "paddingTop": "10px" }}>
+        <p><b>{ entry.job }</b></p>
+        <p style={{ "paddingLeft": "5px" }}>{ entry.title }</p>
+        <p style={{ "paddingLeft": "5px" }}>Employed: { entry.employed }</p>
+      </div>
+    </div>)
+  }
+
   render() {
-    const { education, scorecard } = this.state
+    const { education, jobs, scorecard } = this.state
     return (
       <div className="snavRoot">
-        <div style={{ "width": "30%" }}>
+        <div style={{ "width": "30%", "paddingLeft": "25px" }}>
           <div>
             <h3>Education</h3>
             <div style={{ "display": "flex" }}>
@@ -77,6 +103,10 @@ export default class SummaryNav extends Component {
                 <p style={{ "paddingLeft": "5px" }}>Graduated: { education.graduated }</p>
               </div>
             </div>
+          </div>
+          <div>
+            <h3>Work History</h3>
+            { jobs.map(this.workRow) }
           </div>
         </div>
         <div style={{ "display": "flex", "width": "70%", "height": "100%", "margin": "1em" }}>
